@@ -1,0 +1,87 @@
+
+.appLayout {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f5fbff;
+
+  box-sizing: border-box;
+}
+
+
+
+.mainContent {
+  position: relative;
+
+  width: calc(100% - 240px);
+
+  min-height: calc(100vh - 70px);
+
+  margin-left: 240px;
+
+  padding-top: 70px;
+
+  box-sizing: border-box;
+
+  background: #f5fbff;
+
+  overflow-x: hidden;
+}
+
+
+
+.contentWrapper {
+  width: 100%;
+
+  min-height: calc(100vh - 70px);
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+
+
+@media (max-width: 900px) {
+
+  .mainContent {
+    width: calc(100% - 220px);
+
+    margin-left: 220px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+
+  .mainContent {
+    width: calc(100% - 200px);
+
+    margin-left: 200px;
+  }
+
+  .contentWrapper {
+    padding: 20px;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+
+  .mainContent {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-top: 64px;
+  }
+
+  .contentWrapper {
+    padding: 15px;
+  }
+}

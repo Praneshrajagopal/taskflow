@@ -1,0 +1,277 @@
+
+.sidebar {
+  position: fixed;
+
+  top: 70px;
+  left: 0;
+  bottom: 0;
+
+  width: 240px;
+
+  height: calc(100vh - 70px);
+
+  margin: 0;
+  padding: 0;
+
+  background: #0096c7;
+
+  border-right: 1px solid #808080;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  z-index: 1000;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+
+.workspace {
+  width: 100%;
+
+  padding: 28px 12px;
+
+  box-sizing: border-box;
+}
+
+
+
+.title {
+  margin: 0 0 14px 11px;
+
+  color: #caf0f8;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+
+
+.navItem {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px 14px;
+
+  margin-bottom: 5px;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+
+.icon {
+  width: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #caf0f8;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+.navItem:hover {
+  background: #0077b6;
+
+  color: #ffffff;
+}
+
+
+
+.active {
+  background: #ffffff;
+
+  color: #0077b6;
+}
+
+
+.active .icon {
+  color: #0077b6;
+}
+
+
+.active:hover {
+  background: #ffffff;
+
+  color: #0077b6;
+}
+
+
+
+.logoutContainer {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.logoutButton {
+  width: 100%;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.logoutIcon {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+.logoutButton:hover {
+  background: #ffffff;
+
+  color: #0096c7;
+}
+
+
+.logoutButton:active {
+  transform: scale(0.98);
+}
+
+
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 220px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .workspace {
+    padding: 22px 10px;
+  }
+
+  .navItem {
+    padding: 11px 12px;
+
+    font-size: 13px;
+  }
+
+  .logoutContainer {
+    padding: 12px;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+
+  .sidebar {
+    position: fixed;
+
+    top: auto;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 64px;
+
+    border-right: none;
+
+    border-top: 1px solid #808080;
+
+    flex-direction: row;
+
+    overflow: hidden;
+  }
+
+  .workspace {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 5px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .navItem {
+    flex: 1;
+
+    height: 50px;
+
+    margin: 0 2px;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 10px;
+  }
+
+  .logoutContainer {
+    display: none;
+  }
+}

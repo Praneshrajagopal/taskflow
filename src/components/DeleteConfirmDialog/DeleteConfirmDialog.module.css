@@ -1,0 +1,322 @@
+
+.overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(3, 4, 94, 0.45);
+
+  backdrop-filter: blur(2px);
+}
+
+
+
+.dialog {
+  width: 100%;
+
+  max-width: 420px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e1e7;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px rgba(3, 4, 94, 0.2);
+
+  text-align: center;
+
+  animation: dialogOpen 0.18s ease-out;
+}
+
+
+
+@keyframes dialogOpen {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+
+.dialog h2 {
+  margin: 0;
+
+  color: #03045e;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+
+
+.message {
+  margin: 9px 0 16px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+
+.taskBox {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  background: #f5fbff;
+
+  border: 1px solid #d8edf3;
+
+  border-radius: 7px;
+
+  text-align: left;
+}
+
+
+
+.taskLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+
+
+.taskName {
+  display: block;
+
+  color: #03045e;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+
+
+.warning {
+  margin: 12px 0 20px;
+
+  color: #b91c1c;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+
+
+.actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+
+
+.cancelButton {
+  height: 40px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancelButton:hover {
+  background: #f8fafc;
+
+  color: #334155;
+
+  border-color: #94a3b8;
+}
+
+.cancelButton:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+
+.deleteButton {
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+  border: 1px solid #dc2626;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #b91c1c;
+
+  border-color: #b91c1c;
+}
+
+.deleteButton:active {
+  transform: scale(0.98);
+}
+
+.deleteButton:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+
+.spinner {
+  width: 13px;
+  height: 13px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+
+@media (max-width: 500px) {
+
+  .dialog {
+    max-width: 100%;
+
+    padding: 23px 18px;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .cancelButton,
+  .deleteButton {
+    width: 100%;
+  }
+
+}

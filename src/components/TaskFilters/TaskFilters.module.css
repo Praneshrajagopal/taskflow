@@ -1,0 +1,207 @@
+.wrapper {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 2fr repeat(4, 1fr) auto;
+
+  align-items: end;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #d8e1e7;
+
+  border-radius: 9px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 3px 12px rgba(3, 4, 94, 0.04);
+}
+
+
+.searchWrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+
+  left: 11px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #64748b;
+
+  font-size: 18px;
+
+  pointer-events: none;
+}
+
+.search {
+  width: 100%;
+
+  height: 38px;
+
+  padding: 0 12px 0 34px;
+
+  background: #ffffff;
+
+  color: #03045e;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.search::placeholder {
+  color: #94a3b8;
+}
+
+.search:focus {
+  border-color: #0096c7;
+
+  box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.1);
+}
+
+
+.filterGroup {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.filterGroup label {
+  color: #64748b;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.filterGroup select {
+  width: 100%;
+
+  height: 38px;
+
+  padding: 0 9px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.filterGroup select:focus {
+  border-color: #0096c7;
+
+  box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.1);
+}
+
+
+.resetButton {
+  height: 38px;
+
+  padding: 0 15px;
+
+  background: #ffffff;
+
+  color: #64748b;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.resetButton:hover {
+  background: #e8f8fc;
+
+  color: #0077b6;
+
+  border-color: #90e0ef;
+}
+
+.resetButton:active {
+  transform: scale(0.98);
+}
+
+
+@media (max-width: 1100px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .searchWrapper {
+    grid-column: span 3;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 12px;
+  }
+
+  .searchWrapper {
+    grid-column: span 2;
+  }
+
+  .filterGroup {
+    min-width: 0;
+  }
+
+  .resetButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .searchWrapper {
+    grid-column: span 1;
+  }
+}
